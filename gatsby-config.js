@@ -7,16 +7,11 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "",
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+	"gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -25,5 +20,14 @@ module.exports = {
       },
       __key: "images",
     },
+	 
+	  {
+		  resolve: "gatsby-plugin-react-svg",
+		  options: {
+			  rule: {
+				  include: /\.inline\.svg$/, // See below to configure properly
+			  },
+		  },
+	  },
   ],
 };
